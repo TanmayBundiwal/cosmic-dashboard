@@ -8,18 +8,17 @@ const Neows = () => {
   useEffect(() => {
     const fetchNeoData = async () => {
       
-      const apiKey = 'FCnSjOzrNfuMARqyrQLvT3HmvdNSRNaKBpAjsiBc';
-      const startDate = new Date().toISOString().slice(0, 10); // get today's date in YYYY-MM-DD format
-      const apiUrl = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&api_key=${apiKey}`;
-
+      
       try {
-        const response = await fetch(apiUrl);
+        const response = await fetch('http://localhost:3001/neows');
         const data = await response.json();
         setNeoData(Object.values(data.near_earth_objects)[0]); // assuming we want today's NEOs
         setLoading(false);
       } catch (error) {
         console.error("Error fetching NEO data: ", error);
       }
+
+   
     };
 
     fetchNeoData();

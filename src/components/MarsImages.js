@@ -9,17 +9,16 @@ const MarsImages = () => {
 
   useEffect(() => {
     const fetchMarsPhotos = async () => {
-      const apiKey = 'FCnSjOzrNfuMARqyrQLvT3HmvdNSRNaKBpAjsiBc'; // Replace 'DEMO_KEY' with your actual NASA API key
-      const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${apiKey}`;
 
       try {
-        const response = await fetch(apiUrl);
+        const response = await fetch('http://localhost:3001/marsimages');
         const data = await response.json();
         setMarsPhotos(data.photos);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching Mars rover photos: ", error);
       }
+
     };
 
     fetchMarsPhotos();

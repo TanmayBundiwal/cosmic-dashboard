@@ -7,13 +7,9 @@ const Donki = () => {
 
   useEffect(() => {
     const fetchSolarEvents = async () => {
-      const apiKey = 'FCnSjOzrNfuMARqyrQLvT3HmvdNSRNaKBpAjsiBc'; // Replace 'DEMO_KEY' with your actual NASA API key
-      const endDate = new Date().toISOString().slice(0, 10); // Today's date in YYYY-MM-DD
-      const startDate = new Date(new Date().setDate(new Date().getDate()-30)).toISOString().slice(0, 10); // 30 days ago
-      const apiUrl = `https://api.nasa.gov/DONKI/notifications?startDate=${startDate}&endDate=${endDate}&api_key=${apiKey}`;
-
+     
       try {
-        const response = await fetch(apiUrl);
+        const response = await fetch('http://localhost:3001/donki');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
