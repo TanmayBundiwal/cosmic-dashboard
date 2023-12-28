@@ -24,7 +24,14 @@ To get started with the Space Dashboard, follow these steps:
 1. **Clone the repository**: [Instructions here]
 2. **Navigate to the project directory**: `cd space-dashboard`
 3. **Install dependencies**: `npm install`
-4. **Run the application**: `npm start`
+4. **Set up Environment Variables**:
+   - Rename `.env.example` to `.env`.
+   - Obtain a NASA API key and fill in the value in the `.env` file.
+5. **Run the application**: `npm start`
+
+## Environment Variables
+To run this project, you will need to add the following environment variables to your `.env` file:
+- `NASA_API_KEY`: Your personal API key for NASA's data services.
 
 ## Live Demo
 A live version of the application will be available [here](#). [This will be updated when I deploy on AWS!]
