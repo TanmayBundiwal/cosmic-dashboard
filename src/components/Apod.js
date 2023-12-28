@@ -6,11 +6,9 @@ const Apod = () => {
 
   useEffect(() => {
     const fetchApod = async () => {
-      const apiKey = 'FCnSjOzrNfuMARqyrQLvT3HmvdNSRNaKBpAjsiBc';
-      const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
-
       try {
-        const response = await fetch(apiUrl);
+        const response = await fetch('http://localhost:3001/apod');
+        console.log(response);
         const data = await response.json();
         setApod(data);
       } catch (error) {
