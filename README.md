@@ -1,6 +1,6 @@
 # Space Dashboard
 
-## Overview
+## Overview 
 The Space Dashboard is a web application that aggregates and displays real-time space-related data, utilizing various NASA APIs. This project serves as a practical application of Agile development methodologies and modern web technologies, reflecting my journey in evolving as a Solutions Engineer.
 
 ## Agile Development Approach
