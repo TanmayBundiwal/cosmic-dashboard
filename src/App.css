@@ -36,8 +36,8 @@ body, html {
   display: grid;
   grid-template-columns: 2fr 1fr; /* 2/3 and 1/3 width allocation */
   grid-template-rows: 1fr;
-  gap: 16px;
-  padding: 16px;
+  gap: 8px;
+  padding: 8px;
   overflow: hidden;
 }
 

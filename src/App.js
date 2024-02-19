@@ -11,16 +11,11 @@ function App() {
   return (
     <div className="dashboard">
       <header className="dashboard-header">
-        <h1>Space Dashboard</h1>
+        <h3>Cosmic Dashboard</h3>
       </header>
       <main className="dashboard-main">
         <section className="dashboard-section left-column">
-          <button 
-            className="toggle-button"
-            onClick={() => setShowApod(!showApod)}>
-            {showApod ? 'Show Mars Images' : 'Show Astronomy Picture Of the Day'}
-          </button>
-          {showApod ? <Apod /> : <MarsImages />}
+          <Apod /> 
         </section>
         <section className="dashboard-section right-column">
           <h2>Space Events & NEO</h2>

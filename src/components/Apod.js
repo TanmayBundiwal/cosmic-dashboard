@@ -8,7 +8,6 @@ const Apod = () => {
     const fetchApod = async () => {
       try {
         const response = await fetch('http://localhost:3001/apod');
-        console.log(response);
         const data = await response.json();
         setApod(data);
       } catch (error) {
