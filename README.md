@@ -19,10 +19,15 @@ The second sprint brought a significant enhancement, transitioning the Space Das
 - Implemented environment variables for enhanced security and configuration management.
 - Improved data handling and API interactions, paving the way for more sophisticated features.
 
+## Version 3: Data Visualization with D3.js
+In this version, interactive and dynamic visualization features were introduced, particularly for asteroid data.
+
+## Version 4: Enhanced UI/UX
+This version updated the card styling of DONKI API information and added a popup screen when the page is loaded to explain what the project achieves.
+
 ## Future Roadmap
 The journey continues with these upcoming enhancements:
-1. **Data Visualization with D3.js**: To introduce interactive and dynamic visualization features, particularly for asteroid data.
-2. **Deployment on AWS**: Aiming for scalability and robustness, the final version will be deployed on AWS, demonstrating cloud service integration skills.
+1. **Deployment on AWS**: Aiming for scalability and robustness, the final version will be deployed on AWS, demonstrating cloud service integration skills.
 
 ## Project Setup
 To get started with the Space Dashboard, follow these steps:
