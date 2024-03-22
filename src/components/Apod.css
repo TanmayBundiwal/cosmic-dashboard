@@ -1,3 +1,60 @@
-.apod-container h1, .apod-container h2 {
-    text-align: center;
+
+  div.separator {
+    margin-bottom: 5px; /* Add margin below separators */
+  
   }
+
+
+  .apod-container {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column;
+    max-height: fit-content;
+  }
+  
+  
+  .apod-info {
+    position: absolute;
+    top: 50%; /* Position the hover screen at the center vertically */
+    left: 50%; /* Position the hover screen at the center horizontally */
+    transform: translate(-50%, -50%); /* Center the hover screen */
+    width: 80%; /* Adjust the width of the hover screen */
+    max-width: 600px; /* Limit the maximum width of the hover screen */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .apod-info.show {
+    opacity: 1;
+  }
+  
+  .apod-info h2 {
+    margin-bottom: 10px;
+  }
+
+  /* .apod-image {
+    max-width: 100%;
+    height: auto; 
+    object-fit: contain; 
+    margin: auto; 
+    border-radius: 10px;
+    display: block; 
+  }
+   */
+
+  .apod-image {
+    width: 100%; /* Allow the image to scale up to the container's width */
+    height: 100%; /* Allow the image to scale up to the container's height */
+    max-width: 100%; /* Ensure the image does not exceed its parent's width */
+    max-height: 100%; /* Ensure the image does not exceed its parent's height */
+    object-fit: contain; /* Maintain aspect ratio while fitting within the container */
+    border-radius: 10px;
+    display: block; /* Treat the image as a block element */
+    margin: auto; /* Center the image horizontally in case it's smaller than the container */
+  }
+  

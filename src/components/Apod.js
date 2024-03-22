@@ -3,6 +3,7 @@ import './Apod.css';
 
 const Apod = () => {
   const [apod, setApod] = useState(null);
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     const fetchApod = async () => {
@@ -18,18 +19,31 @@ const Apod = () => {
     fetchApod();
   }, []);
 
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
   if (!apod) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div>
-       <h1 style={{ textAlign: 'center' }}>Astronomy Picture of the Day</h1>
-      <img src={apod.url} alt={apod.title} style={{ maxWidth: '100%' }} />
-      <h2 style={{ textAlign: 'center' }}>{apod.title}</h2>
-      <p>{apod.explanation}</p>
+    <div className="apod-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <h1 style={{ textAlign: 'center' }}>Astronomy Picture of the Day</h1>
+      <div className="separator"></div>
+      <img className="apod-image" src={apod.url} alt={apod.title}  />
+      <div className={`apod-info ${hovered ? 'show' : 'hide'}`}>
+        <h2 style={{ textAlign: 'center' }}>{apod.title}</h2>
+        <p>{apod.explanation}</p>
+      </div>
     </div>
   );
+
+  
 };
 
 export default Apod;

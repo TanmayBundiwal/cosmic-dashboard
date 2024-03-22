@@ -1,26 +1,51 @@
+
+
 .card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .card {
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fafafa;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 600px;
-  }
-  
-  .card p {
-    text-align: left;
-    line-height: 1.6;
-  }
-  
-  .card p:first-child {
-    font-weight: bold;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.card p {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.top-right {
+  position: absolute;
+  font-weight: bold;
+  top: 2px; /* Adjust padding from top */
+  right: 5px; /* Adjust padding from right */
+  font-size: 0.6em; /* Adjust font size */
+}
+
+.links-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.links-container a {
+  flex: 0 0 10.5%; /* Set each image container to take up 12.5% of the container width (1/8th) */
+  padding: 5px; /* Add padding around each image container */
+}
+
+.links-container img {
+  width: 100%; /* Ensure images fill their respective containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+div.separator {
+  margin-top: 5px; /* Add margin below separators */
+}

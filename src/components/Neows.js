@@ -151,8 +151,13 @@ const Neows = () => {
   }
 
   return (
-    <div ref={containerRef} className="neo-visualization">
-      <svg ref={svgRef} />
+    <div>
+      <h1 >Closest Asteroids to Earth</h1>
+      <div className="separator"></div>
+      <div ref={containerRef} className="neo-visualization">
+        <svg ref={svgRef} />
+      </div>
+      <div className="separator"></div>
     </div>
   );
 };
