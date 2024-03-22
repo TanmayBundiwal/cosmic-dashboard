@@ -47,8 +47,6 @@ app.get('/neows', async (req, res) => {
     const startDate = new Date().toISOString().slice(0, 10); // get today's date in YYYY-MM-DD format
     const apiUrl = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&api_key=${apiKey}`;
 
-  
-
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
