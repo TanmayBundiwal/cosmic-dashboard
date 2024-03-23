@@ -25,9 +25,6 @@ In this version, interactive and dynamic visualization features were introduced,
 ## Version 4: Enhanced UI/UX
 This version updated the card styling of DONKI API information and added a popup screen when the page is loaded to explain what the project achieves.
 
-## Future Roadmap
-The journey continues with these upcoming enhancements:
-1. **Deployment on AWS**: Aiming for scalability and robustness, the final version will be deployed on AWS, demonstrating cloud service integration skills.
 
 ## Project Setup
 To get started with the Space Dashboard, follow these steps:
@@ -44,7 +41,11 @@ To run this project, you will need to add the following environment variables to
 - `NASA_API_KEY`: Your personal API key for NASA's data services.
 
 ## Live Demo
-A live version of the application will be available [here](#). [This will be updated when I deploy on AWS!]
+A live version of the application is available [here](http://cosmic-dashboard-reactonly-app.s3-website-us-east-1.amazonaws.com).
+
+## Important Note on live Demo: 
+The Cosmic Dashboard has evolved through its versions as a full-stack application combining a Node.js backend with a React.js frontend. However, to optimize ongoing costs and resource utilization, the live version currently hosted on AWS has been adapted to a React-only format. This adjustment ensures cost-effectiveness while maintaining the core functionality and user experience, though it does mean that some backend-dependent features are temporarily streamlined. This decision reflects a pragmatic approach to balancing project sustainability with financial considerations.
+
 
 ## Contributing
 Contributions, feedback, and suggestions are warmly welcomed as this project is a platform for continuous learning and collaboration.
